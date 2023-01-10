@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // function Employee(salary, name) {
+      //   this.salary = salary;
+      //   this.name = name;
+      //   this.getSalary = () => this.salary;
+      // }
+      // let amount = parseInt(prompt("Nhập số lượng nhân viên"));
+      // const manager = [];
+      // for (let i = 0; i < amount; i++) {
+      //   let name = prompt("nhập tên nhân viên");
+      //   let salary = parseInt(prompt("nhập lương nhân viên"));
+      //   manager.push(new Employee(salary, name));
+      // }
+      // let sum = 0;
+      // for (const key in manager) {
+      // }
+
+      // console.log(manager);
+      //khởi tạo mảng chứa các nhân viên
+      let arEmployee = [];
+      //nhập dữ liệu cho các nhân viên
+      let empNumber = parseInt(prompt("Nhập số lượng nhân viên"));
+      for (let i = 0; i < empNumber; i++) {
+        let empNew = {};
+        let name = prompt("nhập tên nhân viên");
+        let salary = parseInt(prompt("nhập lương nhân viên"));
+        empNew.name = name;
+        empNew.salary = salary;
+        arEmployee.push(empNew);
+      }
+      //viết hàm tính tổng
+      function total() {
+        let total = 0;
+        for (const emp of arEmployee) {
+          total += emp.salary;
+        }
+        return total;
+      }
+      console.log("tổng", total());
+    </script>
+  </body>
+</html>

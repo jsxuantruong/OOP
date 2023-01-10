@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var product = {
+        productId: "P001",
+        productName: "LapTop",
+        price: "1000",
+      };
+      var st1 = {};
+      console.log(product);
+      function checkEmpty(obj) {
+        for (const key in obj) {
+          return true;
+        }
+        return false;
+      }
+      console.log("kiểm tra product", checkEmpty(product));
+      console.log("kiểm tra st1", checkEmpty(st1));
+    </script>
+  </body>
+</html>
